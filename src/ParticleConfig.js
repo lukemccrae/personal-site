@@ -8,7 +8,7 @@ class Particle extends Component{
             <Particles params={{
                 "particles": {
                   "number": {
-                    "value": 600,
+                    "value": 700,
                     "density": {
                       "enable": true,
                       "value_area": 1000

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import Particles from './ParticleConfig.js'
+import Particles from './ParticleConfig.js';
+import Name from './Name.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <div>
-            <h3>Luke McCrae</h3>
-            <h4>Full Stack Developer</h4>
+          <Name></Name>
+          <div id="particles-wrapper">
+            <Particles></Particles>
           </div>
-          <Particles></Particles>
         </header>
       </div>
     );
