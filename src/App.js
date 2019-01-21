@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Particles from './ParticleConfig.js'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
             <h3>Luke McCrae</h3>
             <h4>Full Stack Developer</h4>
           </div>
+          <Particles></Particles>
         </header>
       </div>
     );
