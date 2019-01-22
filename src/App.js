@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Particles from './ParticleConfig.js';
 import Name from './Name.js';
@@ -9,10 +9,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Name></Name>
+        </header>
+        <div class="App-body">
           <div id="particles-wrapper">
             <Particles></Particles>
           </div>
-        </header>
+        </div>
       </div>
     );
   }
