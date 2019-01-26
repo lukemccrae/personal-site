@@ -10,11 +10,12 @@ class App extends Component {
         <header className="App-header">
           <Name></Name>
         </header>
-        <div class="App-body">
+        <div className="App-head">
           <div id="particles-wrapper">
             <Particles></Particles>
           </div>
         </div>
+        <div className="App-contact"></div>
       </div>
     );
   }

@@ -8,7 +8,7 @@ nav {
   text-align: center;
 }
 
-.App-body {
+.App-head {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -36,7 +36,7 @@ canvas {
 
 #name-card {
   position: absolute;
-  top: 10%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -62,4 +62,6 @@ canvas {
 .info-border {
   border-style: solid;
   border-width: 1px;
+  margin-top: 5px;
+  padding: 0 0 0 0 !important;
 }

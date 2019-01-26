@@ -4,23 +4,29 @@ class Name extends Component {
   render() {
     return (
       <div id="name-card">
-        <h3>Luke McCrae - Full Stack Developer</h3>
+        <h3>Luke McCrae</h3>
+        <h2>Full Stack Developer</h2>
         <h4></h4>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="info-border">
-              <div class="button-wrapper">
-                <button class="info-button">Projects</button>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="info-border col-md">
+              <div className="button-wrapper">
+                <button className="info-button">Projects</button>
               </div>
             </div>
-            <div class="info-border">
-              <div class="button-wrapper">
-                <button class="info-button">About</button>
+            <div className="info-border col-md">
+              <div className="button-wrapper">
+                <button className="info-button">About</button>
               </div>
             </div>
-            <div class="info-border">
-              <div class="button-wrapper">
-                <button class="info-button">Resume</button>
+            <div className="col-md info-border ">
+              <div className="button-wrapper">
+                <button className="info-button">Resume</button>
+              </div>
+            </div>
+            <div className="info-border col-md">
+              <div className="button-wrapper">
+                <button className="info-button">Contact</button>
               </div>
             </div>
           </div>
