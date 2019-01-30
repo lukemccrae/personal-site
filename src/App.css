@@ -34,11 +34,39 @@ canvas {
   height: 100vh !important;
 }
 
+@media screen and (max-width: 767px) {
+  #name-card {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #name-card-small {
+    display: none !important;
+  }
+  .mobile-title {
+    display: none !important;
+  }
+}
+
 #name-card {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#name-card-small {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-title {
+  padding: 8px 0 4px 0;
+  border-style: solid;
+  border-width: 0 0 1px 0;
 }
 
 .info-button {
