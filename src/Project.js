@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import createReactClass from 'react';
-
-
 
 const projects = [
   {
@@ -9,7 +6,7 @@ const projects = [
     url: "123"
   },
   {
-    name: "future project",
+    name: "future projectt",
     url: "123"
   },
   {
@@ -26,7 +23,7 @@ class Project extends Component {
             {
               projects.map(p => {
                 return (
-                  <div className="col-md-4 col-centered project-wrapper">
+                  <div key={p.name} className="col-md-3 col-md-offset-1 col-centered project-wrapper">
                     <p className="project-name offset-center">{p.name}</p>
                     <a href={p.url}></a>
                   </div>

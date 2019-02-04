@@ -48,6 +48,20 @@ canvas {
   transform: translate(-50%, -50%);
 }
 
+.resume {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .project {
   position: absolute;
   top: 60%;
@@ -56,8 +70,7 @@ canvas {
 }
 
 .project-wrapper {
-  width: 3em;
-  height: 3em;
+  height: 6em;
   border-style: solid;
   border-width: 1px;
 }
@@ -114,7 +127,11 @@ canvas {
     height: 10em !important;
   }
   .project {
-    top: 60%;
+    top: 65%;
+  }
+  .project-wrapper {
+    height: 6em !important;
+    width: 15em !important;
   }
 }
 
