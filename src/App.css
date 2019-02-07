@@ -62,6 +62,13 @@ canvas {
   transform: translate(-50%, -50%);
 }
 
+.contact {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .project {
   position: absolute;
   top: 60%;
@@ -73,6 +80,7 @@ canvas {
   height: 6em;
   border-style: solid;
   border-width: 1px;
+  margin-top: 5px !important;
 }
 
 .project-name {}

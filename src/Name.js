@@ -2,34 +2,52 @@ import React, {Component} from 'react';
 import ProjectButton from './ProjectButton.js';
 import ContactButton from './ContactButton.js';
 import ResumeButton from './ResumeButton.js';
+import Project from './Project.js';
+import About from './About.js';
+import Resume from './Resume.js';
+import Contact from './Contact.js';
 
 class Name extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hi: "hi",
-      showProjects: false,
-      showContact: false,
-      showResume: false
+      showProjects: 'none',
+      showContact: 'none',
+      showResume: 'none',
+      showAbout: 'block'
     }
   }
   showProjects = () => {
     this.setState({
-      showProjects: true
+      showProjects: 'flex',
+      showContact: 'none',
+      showResume: 'none',
+      showAbout: 'none'
     })
-    console.log('projects');
   }
   showContact = () => {
     this.setState({
-      showContact: true
+      showProjects: 'none',
+      showContact: 'block',
+      showResume: 'none',
+      showAbout: 'none'
     })
-    console.log('contact');
   }
   showResume = () => {
     this.setState({
-      showResume: true
+      showProjects: 'none',
+      showContact: 'none',
+      showResume: 'block',
+      showAbout: 'none'
     })
-    console.log('resume');
+  }
+  showAbout = () => {
+    this.setState({
+      showProjects: 'none',
+      showContact: 'none',
+      showResume: 'none',
+      showAbout: 'block'
+    })
   }
   render() {
     return (
@@ -66,7 +84,7 @@ class Name extends Component {
                   <ProjectButton showProjects={this.showProjects}></ProjectButton>
                 </div>
               </div>
-              <div className="col-md info-border ">
+              <div className="col-md info-border">
                 <div className="button-wrapper">
                   <ContactButton showContact={this.showContact}></ContactButton>
                 </div>
@@ -79,6 +97,10 @@ class Name extends Component {
             </div>
           </div>
         </div>
+        <Project showProjects={this.state.showProjects}></Project>
+        <About showAbout={this.state.showAbout}></About>
+        <Resume showResume={this.state.showResume}></Resume>
+        <Contact showContact={this.state.showContact}></Contact>
       </div>
     );
   }

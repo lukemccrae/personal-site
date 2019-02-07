@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Resume extends Component {
   render() {
     return (
-      <div className="resume">
+      <div style={ { display: this.props.showResume } }   className="resume">
       Hi this is my resume
       </div>
     );

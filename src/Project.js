@@ -16,10 +16,13 @@ const projects = [
 ]
 
 class Project extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div className="project container">
-          <div className="row">
+          <div style={ { display: this.props.showProjects } }  className="row">
             {
               projects.map(p => {
                 return (

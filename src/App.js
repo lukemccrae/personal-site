@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import './App.css';
 import Particles from './ParticleConfig.js';
 import Name from './Name.js';
-import Project from './Project.js';
-import About from './About.js';
-import Resume from './Resume.js';
 
 class App extends Component {
   constructor(props) {
@@ -17,9 +14,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Name></Name>
-          <About></About>
-          <Project></Project>
-          <Resume></Resume>
         </header>
         <div className="App-head">
           <div id="particles-wrapper">
