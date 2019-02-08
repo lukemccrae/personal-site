@@ -14,40 +14,116 @@ class Name extends Component {
       showProjects: 'none',
       showContact: 'none',
       showResume: 'none',
-      showAbout: 'block'
+      showAbout: 'block',
+      projectButton: {
+        backgroundColor: 'none',
+        opacity: '1'
+      },
+      resumeButton: {
+        backgroundColor: 'none',
+        opacity: '1'
+      },
+      contactButton: {
+        backgroundColor: 'none',
+        opacity: '1'
+      }
     }
   }
   showProjects = () => {
-    this.setState({
-      showProjects: 'flex',
-      showContact: 'none',
-      showResume: 'none',
-      showAbout: 'none'
-    })
+    if(this.state.showProjects == 'flex') {
+      this.setState({
+        showProjects: 'none',
+        showAbout: 'block',
+        projectButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        }
+      })
+    } else {
+      this.setState({
+        showProjects: 'flex',
+        showContact: 'none',
+        showResume: 'none',
+        showAbout: 'none',
+        projectButton: {
+          backgroundColor: 'grey',
+          opacity: '.9'
+        },
+        contactButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        },
+        resumeButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        }
+      })
+    }
   }
+
   showContact = () => {
-    this.setState({
-      showProjects: 'none',
-      showContact: 'block',
-      showResume: 'none',
-      showAbout: 'none'
-    })
+    if(this.state.showContact == 'block') {
+      console.log('hi');
+      this.setState({
+        showContact: 'none',
+        showAbout: 'block',
+        contactButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        }
+      })
+    } else {
+      this.setState({
+        showProjects: 'none',
+        showContact: 'block',
+        showResume: 'none',
+        showAbout: 'none',
+        projectButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        },
+        contactButton: {
+          backgroundColor: 'grey',
+          opacity: '.9'
+        },
+        resumeButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        }
+      })
+    }
   }
+
   showResume = () => {
-    this.setState({
-      showProjects: 'none',
-      showContact: 'none',
-      showResume: 'block',
-      showAbout: 'none'
-    })
-  }
-  showAbout = () => {
-    this.setState({
-      showProjects: 'none',
-      showContact: 'none',
-      showResume: 'none',
-      showAbout: 'block'
-    })
+    if(this.state.showResume == 'block') {
+      this.setState({
+        showResume: 'none',
+        showAbout: 'block',
+        resumeButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        }
+      })
+    } else {
+      this.setState({
+        showProjects: 'none',
+        showContact: 'none',
+        showResume: 'block',
+        showAbout: 'none',
+        projectButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        },
+        contactButton: {
+          backgroundColor: 'transparent',
+          opacity: '1'
+        },
+        resumeButton: {
+          backgroundColor: 'grey',
+          opacity: '.9'
+        }
+      })
+    }
   }
   render() {
     return (
@@ -58,17 +134,17 @@ class Name extends Component {
             <div className="row">
               <div className="info-border col-sm">
                 <div className="button-wrapper">
-                  <ProjectButton showProjects={this.showProjects}></ProjectButton>
+                  <ProjectButton buttonStyle={this.state.projectButton} showProjects={this.showProjects}></ProjectButton>
                 </div>
               </div>
               <div className="col-md info-border ">
                 <div className="button-wrapper">
-                  <ContactButton showContact={this.showContact}></ContactButton>
+                  <ContactButton buttonStyle={this.state.contactButton} showContact={this.showContact}></ContactButton>
                 </div>
               </div>
               <div className="info-border col-md">
                 <div className="button-wrapper">
-                  <ResumeButton showResume={this.showResume}></ResumeButton>
+                  <ResumeButton buttonStyle={this.state.resumeButton} showResume={this.showResume}></ResumeButton>
                 </div>
               </div>
             </div>
@@ -81,17 +157,17 @@ class Name extends Component {
             <div className="row">
               <div className="info-border col-sm">
                 <div className="button-wrapper">
-                  <ProjectButton showProjects={this.showProjects}></ProjectButton>
+                  <ProjectButton buttonStyle={this.state.projectButton} showProjects={this.showProjects}></ProjectButton>
                 </div>
               </div>
               <div className="col-md info-border">
                 <div className="button-wrapper">
-                  <ContactButton showContact={this.showContact}></ContactButton>
+                  <ContactButton buttonStyle={this.state.contactButton}  showContact={this.showContact}></ContactButton>
                 </div>
               </div>
               <div className="info-border col-md">
                 <div className="button-wrapper">
-                  <ResumeButton showResume={this.showResume}></ResumeButton>
+                  <ResumeButton buttonStyle={this.state.resumeButton} showResume={this.showResume}></ResumeButton>
                 </div>
               </div>
             </div>
