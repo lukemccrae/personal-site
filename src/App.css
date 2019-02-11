@@ -67,6 +67,14 @@ canvas {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+textarea, input {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  margin-top: 5px !important;
 }
 
 .project {

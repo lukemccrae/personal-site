@@ -30,7 +30,7 @@ class Name extends Component {
     }
   }
   showProjects = () => {
-    if(this.state.showProjects == 'flex') {
+    if(this.state.showProjects === 'flex') {
       this.setState({
         showProjects: 'none',
         showAbout: 'block',
@@ -62,7 +62,7 @@ class Name extends Component {
   }
 
   showContact = () => {
-    if(this.state.showContact == 'block') {
+    if(this.state.showContact === 'block') {
       console.log('hi');
       this.setState({
         showContact: 'none',
@@ -95,7 +95,7 @@ class Name extends Component {
   }
 
   showResume = () => {
-    if(this.state.showResume == 'block') {
+    if(this.state.showResume === 'block') {
       this.setState({
         showResume: 'none',
         showAbout: 'block',

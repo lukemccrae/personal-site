@@ -16,9 +16,6 @@ const projects = [
 ]
 
 class Project extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="project container">
@@ -28,7 +25,7 @@ class Project extends Component {
                 return (
                   <div key={p.name} className="col-md-3 col-md-offset-1 col-centered project-wrapper">
                     <p className="project-name offset-center">{p.name}</p>
-                    <a href={p.url}></a>
+                    <a href={p.url}> </a>
                   </div>
                 )
               })

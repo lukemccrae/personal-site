@@ -5,6 +5,7 @@ class About extends Component {
     return (
       <div style={ { display: this.props.showAbout } }  className="about">
         Hello, my name is Luke
+        <img src={'https://imgur.com/Sxfyv8R'} alt='' className="img-responsive"/>
       </div>
     );
   }
