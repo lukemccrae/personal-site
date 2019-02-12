@@ -30,10 +30,6 @@ nav {
   height: 100vh;
 }
 
-canvas {
-  height: 100vh !important;
-}
-
 #name-card {
   position: absolute;
   top: 20%;
