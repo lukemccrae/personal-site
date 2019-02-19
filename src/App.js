@@ -16,9 +16,7 @@ class App extends Component {
           <Name></Name>
         </header>
         <div className="App-head">
-          <div id="particles-wrapper">
-            <Particles></Particles>
-          </div>
+          
         </div>
         <div className="App-contact"></div>
       </div>

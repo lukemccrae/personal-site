@@ -7,7 +7,9 @@ class Contact extends Component {
     return (
       <div>
         <div style={ { display: this.props.showContact } }  className="contact">
-          <ReactContactForm className="contact" to="lukemccrae@gmail.com" />
+          <div className="container">
+            <h3>I can be contacted by <a href="tel:1-719-639-4921">phone</a> or <a type="email" href="mailto:lukemccrae@gmail.com">email</a>.</h3>
+          </div>
         </div>
       </div>
     );

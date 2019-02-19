@@ -3,25 +3,23 @@ import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import myResume from './resume.pdf';
-import Modal from 'react-modal';
-
-Modal.setAppElement('#root')
+import Modal from 'react-responsive-modal';
 
 const customStyles = {
     content: {
-    border: '0',
+    border: '3px',
     borderRadius: '4px',
     top: 'auto',
     bottom: 'auto',
     minHeight: '10rem',
-    left: '50%',
-    padding: '2rem',
+    padding: '10rem',
     position: 'fixed',
-    right: 'auto',
     top: '50%',
     transform: 'translate(-50%,-50%)',
-    minWidth: '20rem',
-    width: '80%',
+    left: '50%',
+    right: 'auto',
+    minWidth: '10rem',
+    width: '90%',
     maxWidth: '60rem'
   }
 };
@@ -32,53 +30,64 @@ class Resume extends Component {
     this.state = {
       numPages: null,
       pageNumber: 1,
-      modalIsOpen: false,
+      open: false,
       docStyle: {
         width: '10%',
       }
     }
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+
+    // this.openModal = this.openModal.bind(this);
+    // this.afterOpenModal = this.afterOpenModal.bind(this);
+    // this.closeModal = this.closeModal.bind(this);
+    this.onOpenModal = this.onOpenModal.bind(this);
+    this.onCloseModal = this.onCloseModal.bind(this);
   }
 
-  onDocumentLoadSuccess = ({ numPages }) => {
-    this.setState({ numPages });
-  }
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
 
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
+  // onDocumentLoadSuccess = ({ numPages }) => {
+  //   this.setState({ numPages });
+  // }
+  //
+  // openModal() {
+  //   this.setState({modalIsOpen: true});
+  // }
+  //
+  // afterOpenModal() {
+  //   // references are now sync'd and can be accessed.
+  //   this.subtitle.style.color = '#f00';
+  // }
+  //
+  // closeModal() {
+  //   this.setState({modalIsOpen: false});
+  // }
 
   render() {
     const { pageNumber, numPages } = this.state;
 
     return (
       <div style={ { display: this.props.showResume } } className="resume">
-        <button onClick={this.openModal}>View Resume</button>
+        <p>I've been involved in multiple projects and am currently building solutions to civic problems with Code for San Francisco. You can view my resume
+          <a href="#" onClick={this.onOpenModal}> here</a>
+          .
+        </p>
         <div className="">
           <Modal
-            isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
-            onRequestClose={this.closeModal}
-            style={customStyles}
-            contentLabel="Example Modal"
-            shouldCloseOnOverlayClick={true}
+            open={this.state.open}
+            onClose={this.onCloseModal}
           >
 
             <h2 ref={subtitle => this.subtitle = subtitle}></h2>
             <Document
               file={myResume}
               onLoadSuccess={this.onDocumentLoadSuccess}
+              className="pdf-holder"
             >
               <Page pageNumber={pageNumber} />
             </Document>
