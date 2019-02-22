@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ProjectInfoButton from './ProjectInfoButton.js';
 
 const projects = [
   {
@@ -16,21 +17,31 @@ const projects = [
 ]
 
 class Project extends Component {
+  constructor(props) {
+    super(props)
+  }
+  showInfo = (p) => {
+    console.log(p);
+  }
   render() {
     return (
       <div className="project container">
-          <div style={ { display: this.props.showProjects } }  className="row">
-            {
-              projects.map(p => {
-                return (
-                  <div key={p.name} className="col-md-3 col-md-offset-1 col-centered project-wrapper">
-                    <p className="project-name offset-center">{p.name}</p>
-                    <a href={p.url}> </a>
-                  </div>
-                )
-              })
-            }
-          </div>
+          <div id="project-buttons-wrapper" style={ { display: this.props.showProjects } }  className="col-centered row">
+              {
+                projects.map(p => {
+                  console.log(p);
+                  return (
+                    <div className="col-md-3 col-md-offset-1">
+                      <div key={p.name} className="project-wrapper">
+                        <ProjectInfoButton project={p} showInfo={this.showInfo}></ProjectInfoButton>
+
+                      </div>
+                    </div>
+
+                  )
+                })
+              }
+        </div>
       </div>
     );
   }

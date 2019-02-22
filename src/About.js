@@ -9,8 +9,8 @@ class About extends Component {
               <img className="headshot" src={require('./headshot.jpg')} />
             </div>
             <div className="col-md-8">
-              <p>Hello! I'm Luke. I'm passionate about building practical solutions through software.
-                I have an affinity map API's and outdoor challenges.</p>
+              <p>Hi, I'm Luke. I'm passionate about building practical solutions through software.
+                I have an affinity for map API's and outdoor challenges.</p>
             </div>
           </div>
         <img src={'https://imgur.com/Sxfyv8R'} alt='' className="img-responsive"/>

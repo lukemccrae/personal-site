@@ -98,7 +98,7 @@ textarea, input {
 }
 
 canvas {
-  height: 000px;
+  height: 100vh !important;
 }
 
 .project-name {}
@@ -121,6 +121,30 @@ canvas {
   width: 100%;
   cursor: pointer;
   outline: none;
+}
+
+.project-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+#project-buttons-wrapper {
+  justify-content: center;
+}
+
+.project-info-button {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none !important;
 }
 
 .info-button:focus {
