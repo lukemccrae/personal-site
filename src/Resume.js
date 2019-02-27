@@ -73,10 +73,10 @@ class Resume extends Component {
 
     return (
       <div style={ { display: this.props.showResume } } className="resume">
-        <p>I've been involved in multiple projects and am currently building solutions to civic problems with Code for San Francisco. You can view my resume
+        <h5>I've been involved in multiple projects and am currently building solutions to civic problems with Code for San Francisco. You can view my resume
           <a href="#" onClick={this.onOpenModal}> here</a>
           .
-        </p>
+        </h5>
         <div className="">
           <Modal
             open={this.state.open}

@@ -37,7 +37,7 @@ class Particle extends Component{
                   "random": false,
                   "anim": {
                     "enable": false,
-                    "speed": 1,
+                    "speed": 9,
                     "opacity_min": 0.1,
                     "sync": false
                   }

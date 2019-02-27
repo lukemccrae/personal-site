@@ -63,7 +63,6 @@ class Name extends Component {
 
   showContact = () => {
     if(this.state.showContact === 'block') {
-      console.log('hi');
       this.setState({
         showContact: 'none',
         showAbout: 'block',

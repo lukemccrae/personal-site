@@ -24,6 +24,11 @@ nav {
   color: white;
 }
 
+.project-link {
+  width: 24px;
+  height: 24px;
+}
+
 #particles-wrapper {
   flex-flow: column;
   width: 100%;
@@ -49,6 +54,10 @@ nav {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.project-modal {
+  padding-top: 15px;
 }
 
 .about {
@@ -182,6 +191,12 @@ canvas {
   .project-wrapper {
     height: 6em !important;
     width: 15em !important;
+  }
+  .about {
+    padding-top: 30px;
+  }
+  .headshot {
+    width: 150px;
   }
 }
 
